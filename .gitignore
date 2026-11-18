@@ -2,3 +2,4 @@ build/
 reels/models
 __pycache__/
 build_log.txt
+build_clone/

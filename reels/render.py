@@ -25,7 +25,7 @@ VOICE_DELAY = 0.30
 TAIL = 0.50
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "output")
-CACHE = os.path.join(ROOT, "build")
+CACHE = os.path.join(ROOT, os.environ.get("REELS_CACHE", "build"))
 WHITE = (1, 1, 1)
 DARK = (0.05, 0.05, 0.08)
 
