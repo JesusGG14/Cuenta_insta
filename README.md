@@ -35,3 +35,13 @@ python3 reels/gen_docs.py        # regenera GUIONES.md
 ```
 
 Al cambiar un texto de voz, borra `build/` (caché de audio) para que se vuelva a generar.
+
+## Voz clonada (tu voz)
+
+Los vídeos de `output/` usan tu voz clonada con XTTS-v2 a partir de una muestra de audio.
+Para regenerarlos (requiere `coqui-tts`, `torch` CPU y el modelo XTTS-v2 en `reels/models/xtts/`):
+
+```bash
+python reels/clone_tts.py ruta/a/tu_voz.m4a        # crea build_clone/
+REELS_CACHE=build_clone python3 reels/render.py   # monta los vídeos con tu voz
+```
